@@ -7,7 +7,6 @@ import { Star, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw } from 'luc
 import { getProductById, formatPrice } from '@/lib/data';
 import { useCart } from '@/lib/cart-context';
 import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
@@ -199,18 +198,17 @@ export default function ProductPage() {
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Quantity:</label>
-                  <Select value={quantity.toString()} onValueChange={(value) => setQuantity(parseInt(value))}>
-                    <SelectTrigger className="w-20">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {[...Array(10)].map((_, i) => (
-                        <SelectItem key={i + 1} value={(i + 1).toString()}>
-                          {i + 1}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <select 
+                    value={quantity} 
+                    onChange={(e) => setQuantity(parseInt(e.target.value))}
+                    className="w-20 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {[...Array(10)].map((_, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="space-y-2">
