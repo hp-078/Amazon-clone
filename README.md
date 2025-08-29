@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Amazon Clone - Complete Prototype
 
 A comprehensive Amazon clone built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**. This is a complete e-commerce prototype without a database, using mock data for demonstration purposes.
@@ -264,3 +265,7 @@ For questions or issues:
 ---
 
 **Built with ❤️ for learning modern web development**
+=======
+# Amazon-clone
+Amazon Clone Project 
+>>>>>>> 99ed824e05c10fd127e2dae10186f4598333de88
